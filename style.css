@@ -8,8 +8,8 @@
   --color-light: #f7f8fa;       /* Fondo tarjeta claro */
   --color-muted: #e0e3e8;       /* Sección gris */
   --color-text: #ffffff;        /* Texto claro */
-  --color-accent: #ff8800;      /* Primario/CTA */
-  --color-accent-2: #ffb347;    /* Hover CTA */
+  --color-accent: #3B82F6;      /* Primario/CTA */
+  --color-accent-2: #60A5FA;    /* Hover CTA */
   --shadow-1: 0 4px 16px rgba(44,83,100,0.15);
   --shadow-2: 0 2px 12px rgba(44,83,100,0.10);
   --radius-lg: 16px;
@@ -20,12 +20,12 @@
 
 /* ====== Selección de texto ====== */
 ::selection {
-  background-color: rgba(255, 136, 0, 0.8);
+  background-color: rgba(59, 130, 246, 0.8);
   color: #ffffff;
 }
 
 ::-moz-selection {
-  background-color: rgba(255, 136, 0, 0.8);
+  background-color: rgba(59, 130, 246, 0.8);
   color: #ffffff;
 }
 
@@ -615,7 +615,7 @@ p, li, label, input, textarea {
 .hero-form{display:flex; flex-direction:column; gap:12px; width:100%}
 .hero-form input{
   padding:6px 8px; border-radius:8px; border:1px solid #666;  /* mejor contraste */
-  background:var(--color-dark); color:#fff; font-size:1rem;
+  background:var(--color-dark-2); color:#fff; font-size:1rem;
 }
 .hero-form input::placeholder, .hero-form textarea::placeholder{
   color:#aaa; opacity:1;
@@ -624,12 +624,12 @@ p, li, label, input, textarea {
 .hero-form input:-webkit-autofill:hover,
 .hero-form input:-webkit-autofill:focus,
 .hero-form input:-webkit-autofill:active{
-  -webkit-box-shadow: 0 0 0 30px var(--color-dark) inset !important;
+  -webkit-box-shadow: 0 0 0 30px var(--color-dark-2) inset !important;
   -webkit-text-fill-color: #fff !important;
 }
 .hero-form textarea{
   padding:8px; border-radius:8px; border:1px solid #666;
-  background:var(--color-dark); color:#fff; font-size:1rem;
+  background:var(--color-dark-2); color:#fff; font-size:1rem;
   font-family:inherit; resize:none; min-height:50px; overflow-y:auto;
 }
 .hero-form input:focus, .hero-form textarea:focus{outline:none; border-color:#888}
@@ -637,14 +637,14 @@ p, li, label, input, textarea {
 .form-field{display:flex; flex-direction:column; flex:1; min-width:0;}
 .form-field input{
   padding:6px 8px; border-radius:8px; border:1px solid #666;
-  background:var(--color-dark); color:#fff; font-size:1rem;
+  background:var(--color-dark-2); color:#fff; font-size:1rem;
   min-width:0; width:100%;
 }
 .form-field input:-webkit-autofill,
 .form-field input:-webkit-autofill:hover,
 .form-field input:-webkit-autofill:focus,
 .form-field input:-webkit-autofill:active{
-  -webkit-box-shadow: 0 0 0 30px var(--color-dark) inset !important;
+  -webkit-box-shadow: 0 0 0 30px var(--color-dark-2) inset !important;
   -webkit-text-fill-color: #fff !important;
 }
 .form-field input:focus{outline:none; border-color:#888}
@@ -700,7 +700,7 @@ p, li, label, input, textarea {
   padding: 12px 8px 6px 8px !important;
   border-radius: 8px;
   border: 1px solid #666;
-  background: var(--color-dark);
+  background: var(--color-dark-2);
   color: #fff;
   font-size: 1rem;
   min-width: 0;
@@ -717,7 +717,7 @@ p, li, label, input, textarea {
   font-size: 1rem;
   pointer-events: none;
   transition: all 0.3s ease;
-  background: var(--color-dark);
+  background: var(--color-dark-2);
   padding: 0 4px;
 }
 
@@ -735,7 +735,7 @@ p, li, label, input, textarea {
   transform: translateY(-50%);
   font-size: 0.8rem;
   color: var(--color-accent);
-  background: var(--color-dark);
+  background: var(--color-dark-2);
 }
 
 .floating-label input:focus,
@@ -756,7 +756,7 @@ p, li, label, input, textarea {
 .floating-label input:-webkit-autofill:hover,
 .floating-label input:-webkit-autofill:focus,
 .floating-label input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px var(--color-dark) inset !important;
+  -webkit-box-shadow: 0 0 0 30px var(--color-dark-2) inset !important;
   -webkit-text-fill-color: #fff !important;
 }
 
@@ -1608,7 +1608,7 @@ p, li, label, input, textarea {
   font-weight: 500;
   margin-bottom: 30px;
   padding: 20px;
-  background: rgba(255, 136, 0, 0.1);
+  background: rgba(59, 130, 246, 0.1);
   border-radius: 8px;
   border-left: 4px solid var(--color-accent);
   word-wrap: break-word;
@@ -1653,7 +1653,7 @@ p, li, label, input, textarea {
 
 .legal-text a:hover {
   text-decoration: underline;
-  background: rgba(255, 136, 0, 0.1);
+  background: rgba(59, 130, 246, 0.1);
 }
 
 /* Mejoras para dispositivos táctiles */
@@ -1668,7 +1668,7 @@ p, li, label, input, textarea {
   }
   
   .legal-text a:active {
-    background: rgba(255, 136, 0, 0.2);
+    background: rgba(59, 130, 246, 0.2);
   }
 }
 
@@ -2049,7 +2049,7 @@ p, li, label, input, textarea {
 }
 
 .benefits__card:nth-child(4).animate {
-  transition-delay: 0.7s;
+  transition-delay: 0.5s;
 }
 
 /* ====== Cookie Banner ====== */
@@ -2193,7 +2193,7 @@ p, li, label, input, textarea {
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(255, 136, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
@@ -2204,7 +2204,7 @@ p, li, label, input, textarea {
 .cookie-settings__btn:hover {
   background: var(--color-accent-2);
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(255, 136, 0, 0.4);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
 }
 
 .cookie-settings__btn:active {
