@@ -7,7 +7,7 @@
   <!-- SEO Meta Tags -->
   <title>BLAKO - Páginas Web Profesionales | Desarrollo Web Rápido y Económico</title>
   <meta name="description" content="🚀 BLAKO crea páginas web profesionales, rápidas y económicas. ✅ Código personalizado ✅ 30 días garantía ✅ Hosting gratis. Presupuesto sin compromiso." />
-  <meta name="keywords" content="páginas web, desarrollo web, diseño web, web corporativa, ecommerce, web presencia, programación web, hosting, dominio" />
+  <meta name="keywords" content="páginas web, desarrollo web, diseño web, web corporativa, ecommerce, tienda online, web presencia, programación web, hosting, dominio" />
   <meta name="author" content="BLAKO" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.blako.es/" />
@@ -136,7 +136,7 @@
         {
           "@type": "Offer",
           "name": "E-commerce",
-          "description": "Tienda online completa con carrito de compras",
+          "description": "Tienda online profesional con carrito de compras y gestión completa",
           "category": "Desarrollo Web"
         }
       ]
@@ -157,34 +157,58 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "¿Cuánto tiempo tardáis en hacer una web?",
+        "name": "¿Cuánto tiempo tardáis en crear mi página web?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Los tiempos dependen del paquete elegido: Básico (7 días), Premium (14 días) y Élite (31 días). Estos plazos incluyen diseño, desarrollo y revisiones."
+          "text": "Los tiempos de desarrollo varían según el tipo de proyecto: Web Presencia (5-7 días), Web Corporativa (10-15 días) y E-commerce (15-25 días). Estos plazos incluyen diseño inicial, desarrollo completo, optimización SEO, pruebas de calidad y revisiones."
         }
       },
       {
         "@type": "Question", 
-        "name": "¿Cómo están hechas vuestras páginas web?",
+        "name": "¿Cómo desarrolláis las páginas web en BLAKO?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "En BLAKO desarrollamos todas nuestras páginas web con código 100% personalizado utilizando HTML, CSS y JavaScript. Esto nos permite crear sitios únicos, optimizados y completamente adaptados a las necesidades específicas de cada cliente."
+          "text": "En BLAKO desarrollamos cada página web con código 100% personalizado utilizando las tecnologías más modernas: HTML5, CSS3, JavaScript ES6+ y librerías específicas según necesidades. Nada de plantillas genéricas de WordPress o Wix."
         }
       },
       {
         "@type": "Question",
-        "name": "¿Las webs están adaptadas a todos los dispositivos?", 
+        "name": "¿Las webs funcionan perfectamente en móviles y tablets?", 
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sí, en BLAKO todas nuestras webs están optimizadas para móviles, tablets y ordenadores. Utilizamos diseño responsive que se adapta perfectamente a cualquier tamaño de pantalla."
+          "text": "Absolutamente sí. En BLAKO aplicamos diseño responsive avanzado y metodología Mobile First. Tu web se verá y funcionará perfectamente en cualquier dispositivo: móviles iOS y Android, tablets, ordenadores Windows y Mac, y navegadores Chrome, Firefox, Safari y Edge."
         }
       },
       {
         "@type": "Question",
-        "name": "¿Por qué sois tan económicos? ¿Sois de calidad?",
+        "name": "¿Qué incluye el contenido de la web?",
         "acceptedAnswer": {
           "@type": "Answer", 
-          "text": "En BLAKO somos económicos por la eficiencia de la empresa y productividad. Hemos optimizado nuestros procesos para ofrecer precios competitivos sin comprometer la calidad. Somos de calidad porque el código es personalizado y sin plantillas."
+          "text": "En BLAKO nos encargamos de todo el contenido: redacción profesional optimizada para SEO, imágenes libres de derechos en alta resolución, iconos modernos y elementos gráficos únicos. Si tienes contenido propio, lo integramos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Por qué BLAKO ofrece precios tan competitivos?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "Nuestros precios competitivos se deben a que trabajamos de forma eficiente y automatizada en ciertos procesos de desarrollo. Al no tener oficinas físicas ni grandes equipos, podemos ofrecer el mejor valor del mercado manteniendo la máxima calidad técnica."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué incluye vuestra garantía de 30 días?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "Durante 30 días completos después de la entrega, realizamos todos los cambios, ajustes y mejoras sin coste adicional. Esto incluye: modificaciones de contenido, ajustes de diseño y colores, optimizaciones de velocidad, mejoras SEO básicas y corrección de errores técnicos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es rentable invertir en una página web profesional?",
+        "acceptedAnswer": {
+          "@type": "Answer", 
+          "text": "Definitivamente sí. Una página web profesional te permite: generar leads 24/7, aumentar confianza y credibilidad, aparecer en Google y Google Maps, competir con empresas más grandes y expandir tu mercado geográfico. Con precios desde 399€, la inversión se recupera rápidamente."
         }
       }
     ]
@@ -263,24 +287,28 @@
                 <label>Si eres humano, deja esto vacío: <input name="bot-field" tabindex="-1" /></label>
               </p>
               <div class="form-row">
-                <div class="form-field">
-                  <label for="nombre" class="sr-only">Nombre completo</label>
-                  <input type="text" id="nombre" name="nombre" placeholder="Nombre" autocomplete="name" required aria-describedby="nombre-help" />
+                <div class="form-field floating-label">
+                  <input type="text" id="nombre" name="nombre" placeholder=" " autocomplete="name" required aria-describedby="nombre-help" />
+                  <label for="nombre">Nombre</label>
                   <span id="nombre-help" class="sr-only">Introduce tu nombre completo</span>
                 </div>
-                <div class="form-field">
-                  <label for="telefono" class="sr-only">Número de teléfono</label>
-                  <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" autocomplete="tel" aria-describedby="telefono-help" />
+                <div class="form-field floating-label">
+                  <input type="tel" id="telefono" name="telefono" placeholder=" " autocomplete="tel" aria-describedby="telefono-help" />
+                  <label for="telefono">Teléfono</label>
                   <span id="telefono-help" class="sr-only">Número de teléfono opcional para contacto</span>
                 </div>
               </div>
-              <label for="email" class="sr-only">Dirección de correo electrónico</label>
-              <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required aria-describedby="email-help" />
-              <span id="email-help" class="sr-only">Dirección de email válida requerida</span>
+              <div class="form-field floating-label">
+                <input type="email" id="email" name="email" placeholder=" " autocomplete="email" required aria-describedby="email-help" />
+                <label for="email">Email</label>
+                <span id="email-help" class="sr-only">Dirección de email válida requerida</span>
+              </div>
               
-              <label for="mensaje" class="sr-only">Mensaje o descripción del proyecto</label>
-              <textarea id="mensaje" name="mensaje" placeholder="Mensaje" rows="4" aria-describedby="mensaje-help"></textarea>
-              <span id="mensaje-help" class="sr-only">Describe tu proyecto web o consulta</span>
+              <div class="form-field floating-label">
+                <textarea id="mensaje" name="mensaje" placeholder=" " rows="4" aria-describedby="mensaje-help"></textarea>
+                <label for="mensaje">Mensaje</label>
+                <span id="mensaje-help" class="sr-only">Describe tu proyecto web o consulta</span>
+              </div>
               
               <div class="checkbox-field">
                 <input type="checkbox" id="privacidad" name="privacidad" required aria-describedby="privacidad-help" />
@@ -365,7 +393,7 @@
 
         <article class="benefits__card" id="tienda-online">
           <h3 class="benefits__card-title">Tienda Online E-commerce</h3>
-          <p class="benefits__description">Tienda online completa con carrito de compras, gestión de productos, pasarela de pago segura y panel de administración. Ideal para empresas que quieren vender productos online y gestionar pedidos profesionalmente.</p>
+          <p class="benefits__description">Tienda online profesional con carrito de compras, gestión de productos, pasarela de pago segura, panel de administración intuitivo y todas las herramientas necesarias para vender online de forma profesional. Desarrollamos tu e-commerce con las mejores tecnologías del mercado.</p>
         </article>
 
         <article class="benefits__card" id="mantenimiento-web">
@@ -482,7 +510,7 @@
             </picture>
           </div>
           <h3 class="portfolio__card-title">E-commerce</h3>
-          <p class="portfolio__description">Tienda online completa con carrito de compras y panel de administración.</p>
+          <p class="portfolio__description">Tienda online profesional con carrito de compras, gestión de productos y panel de administración completo. Desarrollada con tecnologías modernas para máximo rendimiento.</p>
         </article>
       </div>
     </section>
@@ -500,61 +528,61 @@
         <div class="faq__column">
           <div class="faq__item">
             <button class="faq__question" aria-expanded="false">
-              <span>¿Cuánto tiempo tardáis en hacer una web?</span>
+              <span>¿Cuánto tiempo tardáis en crear mi <strong>página web</strong>?</span>
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none">
                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer">
-              <p>Los tiempos dependen del paquete elegido: <strong>Básico (7 días)</strong>, <strong>Premium (14 días)</strong> y <strong>Élite (31 días)</strong>. Estos plazos incluyen diseño, desarrollo y revisiones.</p>
+              <p>Los tiempos de desarrollo varían según el tipo de proyecto: <strong>Web Presencia (5-7 días)</strong>, <strong>Web Corporativa (10-15 días)</strong> y <strong>E-commerce (15-25 días)</strong>. Estos plazos incluyen diseño inicial, desarrollo completo, optimización SEO, pruebas de calidad y revisiones. Trabajamos con entregas parciales para que puedas ver el progreso en tiempo real.</p>
             </div>
           </div>
 
           <div class="faq__item">
             <button class="faq__question" aria-expanded="false">
-              <span>¿Cómo están hechas vuestras <strong>páginas web</strong>?</span>
+              <span>¿Cómo desarrolláis las <strong>páginas web</strong> en BLAKO?</span>
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none">
                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer">
-              <p>En <strong>BLAKO</strong> desarrollamos todas nuestras páginas web con <strong>código 100% personalizado</strong> utilizando <strong>HTML, CSS y JavaScript</strong>. Esto nos permite crear sitios únicos, optimizados y completamente adaptados a las necesidades específicas de cada cliente, garantizando mejor <strong>rendimiento</strong> y <strong>seguridad</strong>.</p>
+              <p>En <strong>BLAKO</strong> desarrollamos cada página web con <strong>código 100% personalizado</strong> utilizando las tecnologías más modernas: <strong>HTML5, CSS3, JavaScript ES6+</strong> y librerías específicas según necesidades. Nada de plantillas genéricas de WordPress o Wix. Cada línea de código está optimizada para lograr la máxima <strong>velocidad de carga</strong>, <strong>seguridad</strong> y <strong>posicionamiento en Google</strong>.</p>
             </div>
           </div>
 
           <div class="faq__item">
             <button class="faq__question" aria-expanded="false">
-              <span>¿Las webs están <strong>adaptadas</strong> a todos los dispositivos?</span>
+              <span>¿Las webs funcionan perfectamente en <strong>móviles y tablets</strong>?</span>
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none">
                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer">
-              <p>Sí, en <strong>BLAKO</strong> todas nuestras webs están <strong>optimizadas para móviles, tablets y ordenadores</strong>. Utilizamos <strong>diseño responsive</strong> que se adapta perfectamente a cualquier tamaño de pantalla.</p>
+              <p>Absolutamente sí. En <strong>BLAKO</strong> aplicamos <strong>diseño responsive avanzado</strong> y metodología <strong>Mobile First</strong>. Tu web se verá y funcionará perfectamente en cualquier dispositivo: móviles iOS y Android, tablets, ordenadores Windows y Mac, y navegadores Chrome, Firefox, Safari y Edge. Optimizamos cada elemento para garantizar una experiencia de usuario excepcional en todas las pantallas.</p>
             </div>
           </div>
 
           <div class="faq__item">
             <button class="faq__question" aria-expanded="false">
-              <span>¿Quién se encarga de las <strong>imágenes y textos</strong>?</span>
+              <span>¿Qué incluye el <strong>contenido</strong> de la web?</span>
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none">
                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer">
-              <p>Si quieres añadir algo tuyo, <strong>perfecto</strong>. Si no, en <strong>BLAKO</strong> nosotros ponemos <strong>imágenes de alta calidad</strong> y <strong>textos persuasivos y buenos</strong> que se adapten a tu negocio. Nos encargamos de todo el contenido visual y textual para que tu web quede profesional y atractiva.</p>
+              <p>En <strong>BLAKO</strong> nos encargamos de todo el contenido: <strong>redacción profesional optimizada para SEO</strong>, <strong>imágenes libres de derechos en alta resolución</strong>, iconos modernos y elementos gráficos únicos. Si tienes contenido propio (textos, fotos, logo), perfecto, lo integramos. Si no, creamos contenido personalizado que conecte con tu audiencia y mejore tu posicionamiento web en Google.</p>
             </div>
           </div>
 
           <div class="faq__item">
             <button class="faq__question" aria-expanded="false">
-              <span>¿Por qué sois tan <strong>económicos</strong>? ¿Sois de <strong>calidad</strong>?</span>
+              <span>¿Por qué BLAKO ofrece <strong>precios tan competitivos</strong>?</span>
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none">
                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer">
-              <p>En <strong>BLAKO</strong> somos económicos por la <strong>eficiencia de la empresa y productividad</strong>. Hemos optimizado nuestros procesos para ofrecer precios competitivos sin comprometer la calidad. Somos de calidad porque el <strong>código es personalizado y sin plantillas</strong>, lo que garantiza webs únicas, rápidas y profesionales adaptadas a cada cliente.</p>
+              <p>Nuestros precios competitivos se deben a que trabajamos de forma <strong>eficiente y automatizada</strong> en ciertos procesos de desarrollo. No sacrificamos calidad: cada web es <strong>100% personalizada, sin plantillas</strong>, con código limpio y optimizado. Al no tener oficinas físicas ni grandes equipos, podemos ofrecer el mejor valor del mercado manteniendo la máxima calidad técnica.</p>
             </div>
           </div>
         </div>
@@ -562,61 +590,61 @@
         <div class="faq__column">
           <div class="faq__item">
             <button class="faq__question" aria-expanded="false">
-              <span>¿Qué incluye la <strong>garantía de 30 días</strong>?</span>
+              <span>¿Qué incluye vuestra <strong>garantía de 30 días</strong>?</span>
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none">
                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer">
-              <p>Durante <strong>30 días</strong> después de la entrega, realizamos <strong>todos los cambios y ajustes necesarios sin coste adicional</strong>. Esto incluye modificaciones de contenido, colores, imágenes y pequeños ajustes de diseño.</p>
+              <p>Durante <strong>30 días completos</strong> después de la entrega, realizamos <strong>todos los cambios, ajustes y mejoras sin coste adicional</strong>. Esto incluye: modificaciones de contenido (textos, imágenes), ajustes de diseño y colores, optimizaciones de velocidad, mejoras SEO básicas y corrección de cualquier error técnico. Tu satisfacción total es nuestra prioridad.</p>
             </div>
           </div>
 
           <div class="faq__item">
             <button class="faq__question" aria-expanded="false">
-              <span>¿Qué incluye el <strong>mantenimiento</strong> opcional?</span>
+              <span>¿En qué consiste el <strong>servicio de mantenimiento</strong>?</span>
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none">
                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer">
-              <p>El mantenimiento incluye <strong>actualizaciones de contenido</strong>, <strong>backups automáticos</strong>, <strong>monitoreo de seguridad</strong>, <strong>optimización de rendimiento</strong>, <strong>soporte técnico prioritario</strong> e informes mensuales.</p>
+              <p>Nuestro mantenimiento integral incluye: <strong>actualizaciones de contenido mensuales</strong>, <strong>backups automáticos semanales</strong>, <strong>monitoreo de seguridad básico</strong>, <strong>optimización de velocidad trimestral</strong>, <strong>soporte técnico por email</strong>, <strong>informes de rendimiento semestrales</strong> y <strong>pequeñas mejoras SEO</strong>. Tu web siempre estará actualizada y protegida con nuestro servicio opcional.</p>
             </div>
           </div>
 
           <div class="faq__item">
             <button class="faq__question" aria-expanded="false">
-              <span>¿Qué pasa con el <strong>dominio, hosting y mantenimiento</strong>?</span>
+              <span>¿Qué incluye el <strong>primer año gratuito</strong>?</span>
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none">
                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer">
-              <p>Incluimos <strong>1 año de dominio, hosting y HTTPS completamente gratis</strong>. Después del primer año, puedes elegir nuestro <strong>servicio de mantenimiento</strong> que incluye hosting, renovación del dominio, certificado SSL (HTTPS), backups, actualizaciones y soporte técnico, o gestionar tu web de forma independiente. <strong>No hay permanencia</strong>, puedes llevarte la web a otro sitio si quieres.</p>
+              <p>Durante el primer año recibes completamente <strong>GRATIS</strong>: <strong>dominio .com o .es</strong>, <strong>hosting SSD de alta velocidad</strong>, <strong>certificado SSL (HTTPS)</strong> y <strong>soporte técnico básico por email</strong>. Después del primer año, puedes continuar con nuestro mantenimiento (35€/mes) o migrar tu web a otro proveedor. <strong>Sin permanencia ni compromisos</strong>.</p>
             </div>
           </div>
 
           <div class="faq__item">
             <button class="faq__question" aria-expanded="false">
-              <span>¿Puedo daros <strong>referencias</strong>?</span>
+              <span>¿Puedo proporcionar <strong>referencias y ejemplos</strong>?</span>
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none">
                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer">
-              <p><strong>Claro que lo recomendamos</strong> en nuestras asesorías de <strong>BLAKO</strong>. Si tienes webs de referencia que te gusten o ideas claras de diseño, compártelas con nosotros. Esto nos ayuda a entender mejor tu visión y crear una web que se adapte perfectamente a tus gustos y necesidades.</p>
+              <p><strong>Por supuesto, es altamente recomendable</strong>. En <strong>BLAKO</strong> valoramos tus ideas y referencias. Comparte con nosotros webs que te inspiren, colores corporativos, logos existentes, fotos propias o cualquier material gráfico. También puedes enviarnos ejemplos de competidores o sitios que te gusten. Esto nos permite crear una web que refleje perfectamente tu visión y supere tus expectativas.</p>
             </div>
           </div>
 
           <div class="faq__item">
             <button class="faq__question" aria-expanded="false">
-              <span>¿Es una buena <strong>inversión</strong>?</span>
+              <span>¿Es rentable invertir en una <strong>página web profesional</strong>?</span>
               <svg class="faq__icon" viewBox="0 0 24 24" fill="none">
                 <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
             <div class="faq__answer">
-              <p>Absolutamente. Una <strong>página web profesional</strong> es esencial hoy en día para cualquier negocio. Te ayuda a <strong>aumentar ventas</strong>, generar <strong>confianza</strong> en tus clientes, aparecer en <strong>Google</strong> y estar disponible <strong>24/7</strong>. Con los precios competitivos y la calidad que ofrece <strong>BLAKO</strong>, se paga sola en poco tiempo.</p>
+              <p>Definitivamente sí. Una <strong>página web profesional</strong> es la inversión más rentable para cualquier negocio hoy en día. Te permite: <strong>generar leads 24/7</strong>, aumentar <strong>confianza y credibilidad</strong>, aparecer en <strong>Google y Google Maps</strong>, competir con empresas más grandes y expandir tu mercado geográfico. Con precios desde 399€ en <strong>BLAKO</strong>, la inversión se recupera rápidamente con nuevos clientes.</p>
             </div>
           </div>
         </div>
@@ -666,15 +694,23 @@ Es el momento de dar el paso: juntos haremos que tu <strong>página web profesio
                 <label>Si eres humano, deja esto vacío: <input name="bot-field" /></label>
               </p>
               <div class="form-row">
-                <div class="form-field">
-                  <input type="text" id="nombre2" name="nombre" placeholder="Nombre" autocomplete="name" required />
+                <div class="form-field floating-label">
+                  <input type="text" id="nombre2" name="nombre" placeholder=" " autocomplete="name" required />
+                  <label for="nombre2">Nombre</label>
                 </div>
-                <div class="form-field">
-                  <input type="tel" id="telefono2" name="telefono" placeholder="Teléfono" autocomplete="tel" />
+                <div class="form-field floating-label">
+                  <input type="tel" id="telefono2" name="telefono" placeholder=" " autocomplete="tel" />
+                  <label for="telefono2">Teléfono</label>
                 </div>
               </div>
-              <input type="email" id="email2" name="email" placeholder="Email" autocomplete="email" required />
-              <textarea id="mensaje2" name="mensaje" placeholder="Mensaje" rows="4"></textarea>
+              <div class="form-field floating-label">
+                <input type="email" id="email2" name="email" placeholder=" " autocomplete="email" required />
+                <label for="email2">Email</label>
+              </div>
+              <div class="form-field floating-label">
+                <textarea id="mensaje2" name="mensaje" placeholder=" " rows="4"></textarea>
+                <label for="mensaje2">Mensaje</label>
+              </div>
               <div class="checkbox-field">
                 <input type="checkbox" id="privacidad2" name="privacidad" required />
                 <label for="privacidad2">Acepto las <a href="politica-privacidad.html">políticas de privacidad</a></label>

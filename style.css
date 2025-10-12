@@ -579,10 +579,10 @@ p, li, label, input, textarea {
 /* ====== Hero ====== */
 .hero{
   width:100%; min-height:320px; background:var(--color-dark);
-  display:flex; align-items:center; justify-content:center; padding:0.25rem 0;
+  display:flex; align-items:center; justify-content:center; padding:40px 0;
 }
 .hero-row{
-  display:flex; gap:80px; align-items:stretch; justify-content:center; margin:0;
+  display:flex; gap:80px; align-items:center; justify-content:center; margin:0;
   padding:0;
 }
 .hero-col{
@@ -604,7 +604,7 @@ p, li, label, input, textarea {
 }
 .hero-col-right{
   display:flex; align-items:center; justify-content:center;
-  margin-top: -4rem;
+  margin-top: 0;
 }
 .form-container{
   background:var(--color-dark-2); border-radius:1rem; padding:12px 10px;
@@ -676,6 +676,80 @@ p, li, label, input, textarea {
 }
 .checkbox-field label a:hover{
   color:#fff;
+}
+
+/* ====== Floating Labels ====== */
+.floating-label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.floating-label input,
+.floating-label textarea {
+  padding: 12px 8px 6px 8px !important;
+  border-radius: 8px;
+  border: 1px solid #666;
+  background: var(--color-dark);
+  color: #fff;
+  font-size: 1rem;
+  min-width: 0;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.floating-label label {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: var(--color-dark);
+  padding: 0 4px;
+}
+
+.floating-label textarea + label {
+  top: 20px;
+  transform: translateY(0);
+}
+
+/* Label flotante cuando hay contenido o focus */
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label textarea:focus + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  background: var(--color-dark);
+}
+
+.floating-label input:focus,
+.floating-label textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* Autofill support for floating labels */
+.floating-label input:-webkit-autofill + label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  color: var(--color-accent);
+}
+
+.floating-label input:-webkit-autofill,
+.floating-label input:-webkit-autofill:hover,
+.floating-label input:-webkit-autofill:focus,
+.floating-label input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--color-dark) inset !important;
+  -webkit-text-fill-color: #fff !important;
 }
 
 /* Toast notification */
