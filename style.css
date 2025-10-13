@@ -39,7 +39,6 @@ html, body {
 body{
   margin:0;
   padding:0;
-  padding-top: var(--header-h);        /* evita solape con header fijo */
   font-family:'Montserrat','Segoe UI',Arial,sans-serif;
   background:#fff;
   color:#111;
@@ -88,12 +87,30 @@ p, li, label, input, textarea {
 
 /* ====== Header ====== */
 .pro-header{
-  background:var(--color-dark);
+  background:transparent;
   color:var(--color-text);
   position:fixed; top:0; left:0; width:100%;
   min-height:var(--header-h);
   display:flex; align-items:center; justify-content:center;
-  z-index:1000; box-shadow:var(--shadow-1);
+  z-index:1000; box-shadow:none;
+  transition: background 0.3s;
+}
+
+.pro-header.scrolled {
+  background: #000;
+}
+
+/* Extend hero animation to cover header area */
+.finisher-header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100vh !important;
+  pointer-events: none;
+  z-index: 1;
 }
 .pro-header-content{
   display:flex; align-items:center; justify-content:space-between;
@@ -578,13 +595,26 @@ p, li, label, input, textarea {
 
 /* ====== Hero ====== */
 .hero{
-  width:100%; min-height:320px; background:var(--color-dark);
+  width:100%; min-height:120vh; background:var(--color-dark);
   display:flex; align-items:center; justify-content:center; padding:40px 0;
   position: relative;
 }
 
+/* Ensure Finisher animation works */
+.finisher-header {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 120vh !important;
+  pointer-events: none;
+  z-index: 1;
+}
+
 .hero.finisher-header {
-  min-height: 600px;
+  min-height: 120vh;
 }
 
 .hero-row{
@@ -823,30 +853,6 @@ p, li, label, input, textarea {
   display: block;
   width: calc(100% + 1.3px);
   height: 60px;
-}
-
-/* Fluid hero -> services transition using CSS mask (shows hero background through the wave) */
-@supports ((-webkit-mask-image: url("") ) or (mask-image: url(""))) {
-  /* Hide legacy wave divider only when mask is supported (keeps fallback otherwise) */
-  .wave-divider--hero { display: none !important; }
-
-  /* Cut a wave-shaped window at the top of services so the hero background shows through */
-  .services {
-    /* Same background as before; mask will only shape the top edge */
-    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'><rect width='1200' height='120' fill='black'/><path d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' fill='white'/></svg>");
-    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'><rect width='1200' height='120' fill='black'/><path d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' fill='white'/></svg>");
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 60px;
-    mask-size: 100% 60px;
-    -webkit-mask-position: top center;
-    mask-position: top center;
-
-    /* Pull services up so the masked wave overlaps the bottom of hero */
-    margin-top: -60px;
-    /* Optional: tiny extra top padding to balance visual spacing after overlap */
-    padding-top: calc(2rem + 8px);
-  }
 }
 
 /* Scallop divider styling */
