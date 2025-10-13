@@ -825,6 +825,30 @@ p, li, label, input, textarea {
   height: 60px;
 }
 
+/* Fluid hero -> services transition using CSS mask (shows hero background through the wave) */
+@supports ((-webkit-mask-image: url("") ) or (mask-image: url(""))) {
+  /* Hide legacy wave divider only when mask is supported (keeps fallback otherwise) */
+  .wave-divider--hero { display: none !important; }
+
+  /* Cut a wave-shaped window at the top of services so the hero background shows through */
+  .services {
+    /* Same background as before; mask will only shape the top edge */
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'><rect width='1200' height='120' fill='black'/><path d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' fill='white'/></svg>");
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'><rect width='1200' height='120' fill='black'/><path d='M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z' fill='white'/></svg>");
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 60px;
+    mask-size: 100% 60px;
+    -webkit-mask-position: top center;
+    mask-position: top center;
+
+    /* Pull services up so the masked wave overlaps the bottom of hero */
+    margin-top: -60px;
+    /* Optional: tiny extra top padding to balance visual spacing after overlap */
+    padding-top: calc(2rem + 8px);
+  }
+}
+
 /* Scallop divider styling */
 .scallop-divider {
   width: 100%;
