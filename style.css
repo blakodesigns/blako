@@ -2,8 +2,8 @@
 /* Fonts loaded via <link> in HTML to improve performance. */
 /* ====== Variables ====== */
 :root{
-  --color-dark: #181a1b;        /* Casi negro */
-  --color-dark-2: #222325;      /* Oscuro para tarjetas en dark */
+  --color-dark: #0a0a0a;        /* Casi negro */
+  --color-dark-2: #151515;      /* Oscuro para tarjetas en dark */
   --color-light: #f7f8fa;       /* Fondo tarjeta claro */
   --color-muted: #e0e3e8;       /* Sección gris */
   --color-text: #ffffff;        /* Texto claro */
@@ -909,7 +909,7 @@ p, li, label, input, textarea {
   display:grid; grid-template-columns:1fr; gap:2rem; margin-top:1.5rem;
 }
 .services__card{
-  background:var(--color-light); border-radius:.5rem; padding:1rem 2rem; box-shadow:0 2px 8px rgba(44,83,100,0.12);
+  background:var(--color-light); border-radius:.5rem; padding:1rem 2rem; box-shadow:0 2px 8px rgba(0,0,0,0.3);
   text-align:center;
 }
 .services__icon{max-width:80px; height:auto; margin-bottom:.5rem}
@@ -2385,7 +2385,7 @@ p, li, label, input, textarea {
 
 /* === Hero Form: unified dark theme (inputs, floating labels, form) === */
 .hero .form-container {
-  background: rgba(0, 0, 0, 0.70);
+  background: rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   padding: 2rem;
