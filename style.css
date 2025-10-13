@@ -580,6 +580,18 @@ p, li, label, input, textarea {
 .hero{
   width:100%; min-height:320px; background:var(--color-dark);
   display:flex; align-items:center; justify-content:center; padding:40px 0;
+  position: relative;
+}
+
+.hero.finisher-header {
+  min-height: 600px;
+}
+
+.hero-row{
+  display:flex; gap:80px; align-items:center; justify-content:center; margin:0;
+  padding:0;
+  position: relative;
+  z-index: 2;
 }
 .hero-row{
   display:flex; gap:80px; align-items:center; justify-content:center; margin:0;
