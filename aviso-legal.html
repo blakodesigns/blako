@@ -12,7 +12,7 @@
   <!-- Favicon -->
   <link rel="icon" href="assets/logos/logo-blanco-mini-fn-fav.png" type="image/png" />
 </head>
-<body>
+<body class="page-dark-header">
 <div id="top"></div>
   <div id="overlay" class="overlay hide" aria-hidden="true"></div>
 
@@ -174,48 +174,5 @@
       </div>
     </div>
   </footer>
-  <script>
-    // Mobile menu functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-      const navMenu = document.querySelector('.nav-menu');
-      
-      if (mobileMenuToggle && navMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
-          const isExpanded = this.getAttribute('aria-expanded') === 'true';
-          
-          // Toggle menu
-          this.classList.toggle('active');
-          navMenu.classList.toggle('active');
-          
-          // Update ARIA attributes
-          this.setAttribute('aria-expanded', !isExpanded);
-          
-          // Prevent body scroll when menu is open
-          document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-        });
-        
-        // Close menu when clicking on menu items
-        navMenu.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', function() {
-            mobileMenuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            mobileMenuToggle.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-          });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-          if (!mobileMenuToggle.contains(e.target) && !navMenu.contains(e.target)) {
-            mobileMenuToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            mobileMenuToggle.setAttribute('aria-expanded', 'false');
-            document.body.style.overflow = '';
-          }
-        });
-      }
-    });
-  </script>
 </body>
 </html>

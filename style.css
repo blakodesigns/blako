@@ -114,6 +114,12 @@ p, li, label, input, textarea {
   background: #000;
 }
 
+/* Pages that need a consistently dark header (non-index pages) */
+.page-dark-header .pro-header,
+.page-dark-header .pro-header.scrolled {
+  background: #000 !important;
+}
+
 /* Extend hero animation to cover header area */
 .finisher-header {
   position: absolute !important;
@@ -2345,21 +2351,6 @@ p, li, label, input, textarea {
   position: relative;
   overflow: hidden;
   background: transparent !important; /* evita fondo negro debajo del canvas */
-}
-
-/* ====== Header background for non-index pages ======
-   By default set a black header for standalone pages (privacy, legal, etc.).
-   On the index page we keep the transparent/hero look by detecting the
-   presence of the #inicio element using the CSS :has() relational selector.
-   Note: :has() is supported in modern browsers (Chrome, Edge, Safari). */
-.pro-header {
-  background: #000; /* default for non-index pages */
-  color: var(--color-text);
-}
-
-/* If the page contains #inicio (index), make header transparent again */
-body:has(#inicio) .pro-header {
-  background: transparent;
 }
 
 /* El contenedor/canvas de la animación debe ocupar todo el hero */
