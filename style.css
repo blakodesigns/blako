@@ -2384,7 +2384,8 @@ p, li, label, input, textarea {
 }
 
 /* === Hero Form: unified dark theme (inputs, floating labels, form) === */
-.hero .form-container {
+.hero .form-container,
+.contact-section .form-container {
   background: rgba(0, 0, 0, 0.45);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
@@ -2396,12 +2397,17 @@ p, li, label, input, textarea {
 .hero .form-container form,
 .hero .form-container input,
 .hero .form-container textarea,
-.hero .form-container label {
+.hero .form-container label,
+.contact-section .form-container form,
+.contact-section .form-container input,
+.contact-section .form-container textarea,
+.contact-section .form-container label {
   background-color: transparent;
   color: #e0e3e8;
 }
 
-.hero .form-container .floating-label label {
+.hero .form-container .floating-label label,
+.contact-section .form-container .floating-label label {
   position: absolute;
   left: 8px;
   top: 50%;
@@ -2418,7 +2424,11 @@ p, li, label, input, textarea {
 .hero .form-container .floating-label input:focus + label,
 .hero .form-container .floating-label input:not(:placeholder-shown) + label,
 .hero .form-container .floating-label textarea:focus + label,
-.hero .form-container .floating-label textarea:not(:placeholder-shown) + label {
+.hero .form-container .floating-label textarea:not(:placeholder-shown) + label,
+.contact-section .form-container .floating-label input:focus + label,
+.contact-section .form-container .floating-label input:not(:placeholder-shown) + label,
+.contact-section .form-container .floating-label textarea:focus + label,
+.contact-section .form-container .floating-label textarea:not(:placeholder-shown) + label {
   top: 0;
   transform: translateY(-50%);
   font-size: 0.8rem;
@@ -2427,7 +2437,9 @@ p, li, label, input, textarea {
 }
 
 .hero .form-container input,
-.hero .form-container textarea {
+.hero .form-container textarea,
+.contact-section .form-container input,
+.contact-section .form-container textarea {
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 6px;
   padding: 0.75rem 1rem;
@@ -2437,13 +2449,17 @@ p, li, label, input, textarea {
 }
 
 .hero .form-container input::placeholder,
-.hero .form-container textarea::placeholder {
+.hero .form-container textarea::placeholder,
+.contact-section .form-container input::placeholder,
+.contact-section .form-container textarea::placeholder {
   color: rgba(255, 255, 255, 0.55);
   opacity: 1;
 }
 
 .hero .form-container input:focus,
-.hero .form-container textarea:focus {
+.hero .form-container textarea:focus,
+.contact-section .form-container input:focus,
+.contact-section .form-container textarea:focus {
   outline: none;
   border-color: var(--color-accent);
   background-color: rgba(0, 0, 0, 0.85);
