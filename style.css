@@ -1365,15 +1365,21 @@ p, li, label, input, textarea {
 }
 
 .faq__answer p {
-  padding: 1.25rem;
+  /* No padding when collapsed to avoid visible spacing */
+  padding: 0;
   margin: 0;
   color: #555;
   line-height: 1.6;
   font-family: 'Poppins', sans-serif;
+  transition: padding 0.2s ease;
 }
 
 .faq__item[data-expanded="true"] .faq__answer {
   max-height: 200px;
+}
+
+.faq__item[data-expanded="true"] .faq__answer p {
+  padding: 1.25rem;
 }
 
 .testimonials__item{max-width:600px; margin:1rem auto}
@@ -2339,6 +2345,21 @@ p, li, label, input, textarea {
   position: relative;
   overflow: hidden;
   background: transparent !important; /* evita fondo negro debajo del canvas */
+}
+
+/* ====== Header background for non-index pages ======
+   By default set a black header for standalone pages (privacy, legal, etc.).
+   On the index page we keep the transparent/hero look by detecting the
+   presence of the #inicio element using the CSS :has() relational selector.
+   Note: :has() is supported in modern browsers (Chrome, Edge, Safari). */
+.pro-header {
+  background: #000; /* default for non-index pages */
+  color: var(--color-text);
+}
+
+/* If the page contains #inicio (index), make header transparent again */
+body:has(#inicio) .pro-header {
+  background: transparent;
 }
 
 /* El contenedor/canvas de la animación debe ocupar todo el hero */
