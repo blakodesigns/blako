@@ -1163,6 +1163,15 @@ p, li, label, input, textarea {
     width: 35px;
     height: 35px;
   }
+  
+  /* Show icons as 2 columns x 2 rows on mobile */
+  .testimonials__icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 2rem;
+    align-items: start;
+    justify-items: center;
+  }
 }
 
 /* CTA button */
@@ -1388,6 +1397,18 @@ p, li, label, input, textarea {
   padding: 1.25rem;
 }
 
+/* On small screens, allow FAQ answers to expand fully (avoid clipping long answers) */
+@media (max-width: 768px) {
+  .faq__answer {
+    transition: none; /* avoid clipped transition on mobile */
+  }
+
+  .faq__item[data-expanded="true"] .faq__answer {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
 .testimonials__item{max-width:600px; margin:1rem auto}
 .testimonials__author{margin-top:.5rem; font-weight:500}
 
@@ -1529,14 +1550,14 @@ p, li, label, input, textarea {
   }
   
   .contact-section .hero-form {
-    padding: 15px;
+    padding: 8px;
     width: 100%;
     margin: 0 auto;
   }
   
   .contact-section__form {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 6px;
   }
   
   .contact-section .form-container {
@@ -1586,14 +1607,14 @@ p, li, label, input, textarea {
   }
   
   .contact-section .hero-form {
-    padding: 15px;
+    padding: 6px;
     width: 100%;
     margin: 0 auto;
   }
   
   .contact-section__form {
     width: 100%;
-    padding: 0 5px;
+    padding: 0 4px;
   }
   
   .contact-section .form-container {
@@ -1619,10 +1640,38 @@ p, li, label, input, textarea {
   min-height: 50px;
   overflow-y: auto;
 }
+
+  /* Make contact form layout and inputs match hero form on mobile */
+  .contact-section .form-container {
+    background: var(--color-dark-2);
+    border-radius: 1rem;
+    padding: 12px 10px;
+    box-shadow: var(--shadow-2);
+  }
+
+  .contact-section .hero-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .contact-section .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contact-section .form-field {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+  }
   
   /* Mejoras adicionales para checkbox en móviles pequeños */
   .contact-section .checkbox-field {
-    margin: 10px 0;
+    margin: 10px 0 0 0;
     gap: 8px;
     min-height: 44px;
     align-items: flex-start;
@@ -1635,7 +1684,6 @@ p, li, label, input, textarea {
   }
   
   .contact-section .checkbox-field label {
-    font-size: 0.8rem;
     line-height: 1.4;
     flex: 1;
     padding: 2px 0;
@@ -2398,10 +2446,10 @@ p, li, label, input, textarea {
 /* === Hero Form: unified dark theme (inputs, floating labels, form) === */
 .hero .form-container,
 .contact-section .form-container {
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
 }
@@ -2650,7 +2698,7 @@ p, li, label, input, textarea {
 .hero .form-container button,
 .contact-section .form-container button {
   display: block;
-  margin: 1rem auto 0 auto;
+  margin: 0 auto 0 auto;
   background: var(--color-accent);
   border: none;
   color: #fff;
