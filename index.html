@@ -337,7 +337,8 @@
         </div>
       </div>
     </section>
-    <section id="como-trabajamos" class="services">
+
+    <section id="como-trabajamos" class="services" style="padding-top: 4rem;">
       <h2 class="services__title">¿Cómo trabajamos?</h2>
       <div class="services__list container">
         <article class="services__card" id="planificacion-web">
@@ -690,7 +691,7 @@ Es el momento de dar el paso: juntos haremos que tu <strong>página web profesio
             <form class="hero-form" id="contactForm" name="contact-section" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-label="Formulario de solicitud de presupuesto">
               <input type="hidden" name="form-name" value="contact-section" />
               <p class="hidden" style="display:none">
-                <label>Si eres humano, deja esto vacío: <input name="bot-field" /></label>
+                <label>Si eres humano, deja esto vacío: <input name="bot-field" tabindex="-1" /></label>
               </p>
               <div class="form-row">
                 <div class="form-field floating-label">
@@ -701,12 +702,13 @@ Es el momento de dar el paso: juntos haremos que tu <strong>página web profesio
                 <div class="form-field floating-label">
                   <input type="tel" id="telefono2" name="telefono" placeholder=" " autocomplete="tel" aria-describedby="telefono2-help" />
                   <label for="telefono2">Teléfono</label>
+                  <span id="telefono2-help" class="sr-only">Número de teléfono opcional para contacto</span>
                 </div>
               </div>
               <div class="form-field floating-label">
                 <input type="email" id="email2" name="email" placeholder=" " autocomplete="email" required aria-describedby="email2-help" />
                 <label for="email2">Email</label>
-                <span id="email2-help" class="sr-only">Direcci��n de email vǭlida requerida</span>
+                <span id="email2-help" class="sr-only">Dirección de email válida requerida</span>
               </div>
               <div class="form-field floating-label">
                 <textarea id="mensaje2" name="mensaje" placeholder=" " rows="4" aria-describedby="mensaje2-help"></textarea>
@@ -715,8 +717,8 @@ Es el momento de dar el paso: juntos haremos que tu <strong>página web profesio
               </div>
               <div class="checkbox-field">
                 <input type="checkbox" id="privacidad2" name="privacidad" required aria-describedby="privacidad2-help" />
-                <span id="privacidad2-help" class="sr-only">Requerido: acepta las pol��ticas de privacidad</span>
-                <label for="privacidad2">Acepto las <a href="politica-privacidad.html">políticas de privacidad</a></label>
+                <label for="privacidad2">Acepto las <a href="politica-privacidad.html" target="_blank" rel="noopener">políticas de privacidad</a></label>
+                <span id="privacidad2-help" class="sr-only">Requerido: acepta las políticas de privacidad</span>
               </div>
               <button type="submit" aria-describedby="submit2-help"><strong>Pedir presupuesto</strong></button>
               <span id="submit2-help" class="sr-only">Enviar formulario para recibir presupuesto gratuito</span>
