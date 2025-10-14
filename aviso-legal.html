@@ -33,6 +33,7 @@
         <ul class="nav-menu">
           <li><a href="index.html">Volver al Inicio</a></li>
           <li><a href="aviso-legal.html">Aviso Legal</a></li>
+          <li><a href="politica-privacidad.html">Política de Privacidad</a></li>
           <li><a href="politica-cookies.html">Política de Cookies</a></li>
         </ul>
       </nav>
@@ -174,5 +175,43 @@
       </div>
     </div>
   </footer>
+  <script>
+    // Mobile menu toggle for legal pages
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+
+      if (mobileMenuToggle && navMenu) {
+        mobileMenuToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          this.classList.toggle('active');
+          navMenu.classList.toggle('active');
+          this.setAttribute('aria-expanded', String(!isExpanded));
+          document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when a link is clicked
+        navMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          });
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!mobileMenuToggle.contains(e.target) && !navMenu.contains(e.target)) {
+            mobileMenuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          }
+        });
+      }
+    });
+  </script>
 </body>
 </html>
