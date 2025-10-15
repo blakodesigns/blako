@@ -461,19 +461,23 @@ textarea {
         justify-content: center;
     }
 
-    /* Use explicit spans inside the H1 instead of hiding the real text and using ::before
-       which can trigger Lighthouse rule H1UserAgentFontSizeInSection. */
     .hero-col-left h1 {
         font-size: 1.3rem !important;
         text-align: left;
         margin: 1rem 0;
         width: 100%;
         line-height: 1.3;
-        display: block;
     }
 
-    .h1-full { display: inline; }
-    .h1-short { display: none; }
+    .hero-col-left h1 {
+        font-size: 0 !important;
+    }
+
+    .hero-col-left h1::before {
+        content: "Desarrollo Web Profesional | Páginas Web Rápidas";
+        font-size: 1.5rem;
+        display: block;
+    }
 
     .hero-features {
         margin: 0 auto;
@@ -571,16 +575,14 @@ textarea {
     }
 
     .hero-col-left h1 {
-        font-size: 1.15rem !important;
-        line-height: 1.2;
-        margin: 1rem 0 1rem 0 !important;
-        text-align: left;
+        font-size: 0 !important;
     }
 
-    /* On small viewports show the short variant and hide the full text to preserve layout
-       but keep both elements present in the DOM (Lighthouse reads actual computed font-size). */
-    .h1-full { display: none; }
-    .h1-short { display: inline; font-size: 1.35rem; }
+    .hero-col-left h1::before {
+        content: "Desarrollo Web Profesional | Páginas Web Rápidas";
+        font-size: 1.35rem;
+        display: block;
+    }
 
     .hero-features {
         font-size: .85rem;
