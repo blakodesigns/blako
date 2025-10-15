@@ -1,5 +1,48 @@
 /* ====== Fuente ====== */
 /* Fonts loaded via <link> in HTML to improve performance. */
+/* Local @font-face declarations (self-hosted fonts in assets/tipografias) */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/tipografias/montserrat-v31-latin-regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/tipografias/montserrat-v31-latin-700.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/tipografias/raleway-v37-latin-600.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/tipografias/raleway-v37-latin-700.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/tipografias/poppins-v24-latin-regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/assets/tipografias/poppins-v24-latin-500.woff2') format('woff2');
+  font-display: swap;
+}
 /* ====== Variables ====== */
 :root{
   --color-dark: #0a0a0a;        /* Casi negro */
@@ -98,6 +141,9 @@ p, li, label, input, textarea {
 .shadow-1{box-shadow:var(--shadow-1)}
 .shadow-2{box-shadow:var(--shadow-2)}
 .container{max-width:var(--container); margin:0 auto; padding:0 16px}
+
+/* SVG icon utility (uses external sprite via <use>) */
+.icon{width:18px;height:18px;display:inline-block;vertical-align:middle;fill:none;stroke:currentColor}
 
 /* ====== Header ====== */
 .pro-header{
@@ -944,7 +990,7 @@ p, li, label, input, textarea {
   display: block;
   text-decoration: none;
   text-align: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Raleway", sans-serif;
 }
 
 .services__btn:hover {
@@ -987,7 +1033,7 @@ p, li, label, input, textarea {
   font-weight: 700;
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Raleway", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
@@ -1032,7 +1078,7 @@ p, li, label, input, textarea {
   color: var(--color-accent);
   text-align: center;
   margin: auto 0 0 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Raleway", sans-serif;
   padding-top: 1.5rem;
 }
 
@@ -1151,7 +1197,7 @@ p, li, label, input, textarea {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-dark);
-  font-family: 'Raleway', sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Raleway", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -1193,7 +1239,7 @@ p, li, label, input, textarea {
   transition: box-shadow .2s, transform .1s;
   text-decoration: none;
   display: inline-block;
-  font-family: 'Raleway', sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Raleway", sans-serif;
 }
 
 .testimonials__btn:hover {
@@ -1348,7 +1394,7 @@ p, li, label, input, textarea {
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s ease;
-  font-family: 'Raleway', sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Raleway", sans-serif;
 }
 
 .faq__question:hover {
