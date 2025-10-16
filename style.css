@@ -52,10 +52,12 @@
     --color-light: #f7f8fa;
     --color-muted: #e0e3e8;
     --color-text: #fff;
-    --color-accent: #3b82f6;
-    --color-accent-2: #60a5fa;
-    --shadow-1: 0 4px 16px rgba(44,83,100,.15);
-    --shadow-2: 0 2px 12px rgba(44,83,100,.10);
+    /* acentos azules: intensificar y oscurecer sin tocar el fondo del hero */
+    --color-accent: #1e40af; /* más oscuro y potente */
+    --color-accent-2: #1e3a8a; /* variante secundaria más profunda */
+    /* sombras más profundas que combinan con los acentos oscuros */
+    --shadow-1: 0 4px 16px rgba(19,37,90,.18);
+    --shadow-2: 0 2px 12px rgba(19,37,90,.12);
     --radius-lg: 16px;
     --radius-md: 8px;
     --header-h: 56px;
@@ -257,6 +259,18 @@ textarea {
     width: 100%;
 }
 
+/* Cuando el header está transparente (no scrolled), los enlaces en hover se vuelven negros
+   Cuando el header tiene la clase .scrolled (fondo negro), se mantiene el comportamiento actual. */
+.pro-header:not(.scrolled) .pro-nav a:hover,
+.pro-header:not(.scrolled) .pro-nav a:focus {
+    color: #fff;
+}
+.pro-header:not(.scrolled) .pro-nav a:hover::after,
+.pro-header:not(.scrolled) .pro-nav a:focus::after {
+    /* asegurar que la línea inferior también contraste cuando el header está sobre el hero */
+    background: #fff;
+}
+
 .pro-nav button {
     color: #fff;
     text-decoration: none;
@@ -298,6 +312,16 @@ textarea {
 .pro-nav button:hover::after,
 .pro-nav button:focus::after {
     width: 100%;
+}
+
+/* Botones en header transparente: hover a negro */
+.pro-header:not(.scrolled) .pro-nav button:hover,
+.pro-header:not(.scrolled) .pro-nav button:focus {
+    color: #fff;
+}
+.pro-header:not(.scrolled) .pro-nav button:hover::after,
+.pro-header:not(.scrolled) .pro-nav button:focus::after {
+    background: #fff;
 }
 
 .mobile-menu-toggle {
