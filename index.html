@@ -290,7 +290,7 @@
           <ul class="hero-features">
             <li>Aumenta tus ventas y conversiones</li>
             <li>Diseño limpio y moderno</li>
-            <li>Código personalizado, sin plantillas</li>
+            <li>Web completamente personalizada</li>
             <li>Te asesoramos sin compromiso</li>
             <li>Tiempo de entrega rápido</li>
             <li>Aparecerás en buscadores</li>
@@ -302,8 +302,7 @@
 
         <div class="hero-col hero-col-right">
           <div class="form-container">
-            <form class="hero-form" id="heroForm" name="contact-hero" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-label="Formulario de solicitud de presupuesto">
-              <input type="hidden" name="form-name" value="contact-hero" />
+            <form class="hero-form" id="heroForm" method="POST" action="https://formspree.io/f/xqayoaol" aria-label="Formulario de solicitud de presupuesto">
               <p class="hidden" style="display:none">
                 <label>Si eres humano, deja esto vacío: <input name="bot-field" tabindex="-1" /></label>
               </p>
@@ -714,8 +713,7 @@
         </div>
         <div class="contact-section__form">
           <div class="form-container">
-            <form class="hero-form" id="contactForm" name="contact-section" method="POST" data-netlify="true" netlify-honeypot="bot-field" aria-label="Formulario de solicitud de presupuesto">
-              <input type="hidden" name="form-name" value="contact-section" />
+            <form class="hero-form" id="contactForm" method="POST" action="https://formspree.io/f/xqayoaol" aria-label="Formulario de solicitud de presupuesto">
               <p class="hidden" style="display:none">
                 <label>Si eres humano, deja esto vacío: <input name="bot-field" tabindex="-1" /></label>
               </p>
@@ -911,62 +909,7 @@
         }
       }
 
-      // Hero form handler
-      if (heroForm) {
-        heroForm.addEventListener('submit', async function(e) {
-          e.preventDefault();
-          const form = this;
-
-          // Build payload including Netlify-required form-name
-          const data = Object.fromEntries(new FormData(form).entries());
-          data['form-name'] = form.getAttribute('name') || 'contact-hero';
-
-          try {
-            const response = await fetch('/', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: encodeFormData(data)
-            });
-
-            if (response.ok) {
-              showToast(toast);
-              form.reset();
-            } else {
-              alert('No se pudo enviar el formulario. Inténtalo de nuevo.');
-            }
-          } catch (err) {
-            alert('Ha ocurrido un error al enviar. Revisa tu conexión.');
-          }
-        });
-      }
-
-      // Contact form handler
-      if (contactForm) {
-        contactForm.addEventListener('submit', async function(e) {
-          e.preventDefault();
-          const form = this;
-
-          const data = Object.fromEntries(new FormData(form).entries());
-          data['form-name'] = form.getAttribute('name') || 'contact-section';
-
-          try {
-            const response = await fetch('/', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: encodeFormData(data)
-            });
-
-            if (response.ok) {
-              showToast(toast2);
-              form.reset();
-            } else {
-              alert('No se pudo enviar el formulario. Inténtalo de nuevo.');
-            }
-          } catch (err) {
-            alert('Ha ocurrido un error al enviar. Revisa tu conexión.');
-          }
-        });
-      }
+      // ...el resto del código permanece igual, pero se elimina el JS de envío de formularios personalizado...
     });
 
     // Optimized animations and cookie functionality
